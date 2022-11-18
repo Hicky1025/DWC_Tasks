@@ -3,6 +3,10 @@ let username;
 let userresult;
 
 username = prompt("お名前を教えて下さい。");
+if (username == "") {
+    username = "名無し";
+}
+// htmlへの出力命令の前に特定条件でのusernameの書き換えを実施
 document.getElementById("name").innerHTML = username;
 
 let rand = Math.floor( Math.random() * 5);
